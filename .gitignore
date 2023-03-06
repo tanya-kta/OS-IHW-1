@@ -1,3 +1,9 @@
+cmake-build-debug
+.clang-format
+.clang-tidy
+.idea
+CMakeLists.txt
+
 # Prerequisites
 *.d
 
