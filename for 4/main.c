@@ -23,7 +23,7 @@ void processString(char *str, int n_bytes, char *used1, char *used2) {
 int processUsed(char *used, char *str) {
     int id = 0;
     for (int i = 0; i < 26; ++i) {
-        if (used[i] == 1) {
+        if (used[i] == 0) {
             str[id] = 'a' + i;
             ++id;
         }
@@ -53,7 +53,7 @@ int main(int argc, char **argv) {
             char str[5010];
             int n_bytes = read(file, str, 5000);
             str[n_bytes] = '\0';
-            printf("%s\n", str);
+            //printf("%s\n", str);
 
             close(fd2[0]);
             write(fd2[1], str, n_bytes + 1);
