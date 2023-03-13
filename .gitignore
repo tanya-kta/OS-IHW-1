@@ -3,6 +3,10 @@ cmake-build-debug
 .clang-tidy
 .idea
 CMakeLists.txt
+*/FIFO-1
+*/FIFO-2
+*/r1
+*/r2
 
 # Prerequisites
 *.d
