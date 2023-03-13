@@ -76,7 +76,7 @@ int main(int argc, char **argv) {
         char used2[26];
         read(fd1[0], used1, sizeof(used1));
         read(fd1[0], used2, sizeof(used2));
-        int file = open(argv[2], O_WRONLY);
+        int file = open(argv[2], O_WRONLY|O_CREAT);
         char str[26];
         int n_bytes = processUsed(used2, str);
         write(file, str, n_bytes);
