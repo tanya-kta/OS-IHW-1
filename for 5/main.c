@@ -95,7 +95,7 @@ int main(int argc, char **argv) {
         read(fp, used2, sizeof(used2));
         close(fp);
 
-        int file = open(argv[2], O_WRONLY | O_CREAT);
+        int file = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC);
         char str1[26];
         int n_bytes = processUsed(used2, str1);
         write(file, str1, n_bytes);
