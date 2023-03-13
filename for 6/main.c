@@ -1,10 +1,8 @@
 #include <fcntl.h>
 #include <stdio.h>
-#include <sys/stat.h>
 #include <sys/wait.h>
 #include <stdlib.h>
 #include <unistd.h>
-#include <string.h>
 
 void processString(char *str, int n_bytes, char *used1, char *used2) {
     int id = 0;
@@ -51,7 +49,6 @@ int main(int argc, char **argv) {
         int n_bytes = read(fd2[0], str, 5000);
         char used2[26];
         char used1[26];
-        printf("%s\n", str);
         processString(str, n_bytes, used1, used2);
         close(fd1[0]);
         write(fd1[1], used1, sizeof(used1));
